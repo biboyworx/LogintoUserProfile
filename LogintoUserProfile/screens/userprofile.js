@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { View, StyleSheet, ScrollView, Image, Text, ActivityIndicator } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import PropTypes from 'prop-types';
-import Icon from 'react-native-vector-icons/FontAwesome'; // Ensure to install this package
+import Icon from 'react-native-vector-icons/FontAwesome'; 
 import ToggleSwitch from '../components/ToggleSwitch';
 import InfoSect from '../components/InfoSect';
 import SignOutButton from '../components/SignOutButton';
@@ -43,9 +43,9 @@ const UserProfile = () => {
                 <Text style={[styles.name, isDarkMode && styles.nameDark]}>{user.name}</Text>
                 <Text style={[styles.joinedDate, isDarkMode && styles.joinedDateDark]}>{user.joinedDate}</Text>
 
-                {/* Settings icon positioned at the upper right */}
+                
                 <Icon 
-                    name="cog" // Use the cog icon for settings
+                    name="cog" 
                     size={30} 
                     color={isDarkMode ? '#00ffcc' : '#000080'} 
                     style={styles.settingsIcon} 
@@ -64,7 +64,7 @@ const UserProfile = () => {
     );
 };
 
-// PropTypes for better type checking
+
 UserProfile.propTypes = {
     navigation: PropTypes.object.isRequired,
 };
@@ -115,9 +115,9 @@ const styles = StyleSheet.create({
         marginTop: 10,
     },
     settingsIcon: {
-        position: 'absolute', // Position the icon absolutely within the header
+        position: 'absolute', 
         top: 30,
-        right: 30, // Adjust as needed for spacing
+        right: 30, 
     },
 });
 

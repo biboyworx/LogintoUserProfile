@@ -5,13 +5,13 @@ import { Avatar } from 'react-native-elements';
 const AvatarProfile = ({ name, joinedDate, profilePicture, joinedDateColor }) => {
     return (
         <View style={styles.container}>
-            {/* Use the correct source format for the Avatar */}
+            
             <Avatar
                 rounded
                 size='xlarge'
-                source={profilePicture} // Directly use the profilePicture prop
+                source={profilePicture} 
                 containerStyle={styles.avatar}
-                title={name.charAt(0)} // Fallback title with the first character of the name
+                title={name.charAt(0)} 
             />
             <Text style={styles.name}>{name}</Text>
             <Text style={[styles.joinedText, { color: joinedDateColor }]}>Joined {joinedDate}</Text>
